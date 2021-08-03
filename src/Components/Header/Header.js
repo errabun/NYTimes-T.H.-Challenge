@@ -6,7 +6,7 @@ function Header() {
   return (
     <div className='header-container'>
       <Link to='/'>
-        <h2 style={{'margin-left': '1.5em'}}>News on Demand</h2>
+        <h2 style={{'marginLeft': '1.5em'}}>News on Demand</h2>
       </Link>
     </div>
   )
