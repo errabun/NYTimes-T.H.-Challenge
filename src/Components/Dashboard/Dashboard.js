@@ -2,10 +2,12 @@ import './Dashboard.css'
 import { useState, useEffect } from 'react'
 
 function Dashboard () {
+  const [newsSelection, setNewsSelection] = useState('')
 
   const apiKey='xK7RQqZlQJNbAVvD3uspG5xdju3gGsvV'
 
   const handleClick = (e) => {
+    setNewsSelection(e.target.value)
     return fetch(`https://api.nytimes.com/svc/topstories/v2/${e.target.value}.json?api-key=${apiKey}`)
       .then(resp => {
         if (!resp.ok) {
@@ -19,7 +21,7 @@ function Dashboard () {
   return(
     <main>
       <h2>What kind of articles would you like to view?</h2>
-      <select name='article-select' id='article-select'>
+      <select name='article-select' id='article-select' value={newsSelection} onChange={setNewsSelection(newsSelection)}>
         <option value=''> --Please select an option--</option>
         <option value='arts'>Arts</option>
         <option value='automobiles'>Automobiles</option>
@@ -47,7 +49,7 @@ function Dashboard () {
         <option value='us'>US News</option>
         <option value='world'>World News</option>
       </select>
-      <button onClick={e => handleClick}
+      <button onClick={e => handleClick}>Show me news</button>
     </main>
   )
 }
