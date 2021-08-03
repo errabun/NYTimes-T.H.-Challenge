@@ -1,11 +1,19 @@
 import './App.css';
 import Dashboard from '../Dashboard/Dashboard'
+import Header from '../Header/Header'
+import { Route } from 'react-router-dom'
 
 function App() {
   return (
-    <main>
-      <Dashboard />
-    </main>
+    <div>
+      <Header />
+      <main>
+        <Route
+          exact route='/'
+          render={() => <Dashboard/>}
+        />
+      </main>
+    </div>
   );
 }
 
