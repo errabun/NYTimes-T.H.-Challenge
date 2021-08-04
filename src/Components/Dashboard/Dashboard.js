@@ -1,15 +1,19 @@
 import './Dashboard.css'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
-function Dashboard ({ handleSubmit }) {
+function Dashboard ({ submitGenre }) {
   const [newsSelection, setNewsSelection] = useState('')
-  const [articles, setArticles] = useState({})
+
+  const handleClick = (e) => {
+    submitGenre(newsSelection)
+  }
 
   return(
     <div className='component-container'>
       <main className='select-container'>
         <h2 style={{'textAlign': 'center'}}>What kind of articles would you like to view?</h2>
-        <select name='article-select' id='article-select' value={newsSelection} onChange={e => setNewsSelection(e.target.value)}>
+        <select id='article-select' value={newsSelection} onChange={e => setNewsSelection(e.target.value)}>
           <option value=''> --Please select an option--</option>
           <option value='arts'>Arts</option>
           <option value='books'>Books</option>
@@ -28,7 +32,10 @@ function Dashboard ({ handleSubmit }) {
           <option value='us'>US News</option>
           <option value='world'>World News</option>
         </select>
-        <button onClick={() => handleSubmit(newsSelection)}>Show me news</button>
+          {/* <button onClick={e => submitGenre(e.target.value)}>Submit</button> */}
+        <Link to='/query' onClick={() => handleClick()}>  
+          View articles
+        </Link>
       </main>
     </div>
   )
