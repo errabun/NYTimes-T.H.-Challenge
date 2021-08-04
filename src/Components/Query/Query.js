@@ -24,10 +24,10 @@ function Query({ articles }) {
       <div className='list-container'>
         <h2>Other related news stories...</h2>
         <ul>
-          {articles.slice(1, 10).map(article => {
+          {articles.map(article => {
             return (
               <div>
-                <li key={article.short_url}>
+                <li key={article.title}>
                   <Link to={article.url}>
                     {article.title}
                   </Link>
