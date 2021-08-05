@@ -22,15 +22,15 @@
 
 Dashboard
 
-<img src='' alt='dashboard view' width='300' height='300'>
+<img src='https://github.com/errabun/NYTimes-T.H.-Challenge/blob/main/public/Screen%20Shot%202021-08-05%20at%209.51.32%20AM.png?raw=true' alt='dashboard view' width='300' height='300'>
 
 Article List
 
-<img src='' alt='articles view' width='300' height='300'>
+<img src='https://github.com/errabun/NYTimes-T.H.-Challenge/blob/main/public/Screen%20Shot%202021-08-05%20at%204.25.11%20PM.png?raw=true' alt='articles view' width='300' height='300'>
 
 Selected Article
 
-<img src='' alt='selected view' width='300' height='300'>
+<img src='https://github.com/errabun/NYTimes-T.H.-Challenge/blob/main/public/Screen%20Shot%202021-08-05%20at%204.24.54%20PM.png?raw=true' alt='selected view' width='300' height='300'>
 
 
 ### Project Progression
