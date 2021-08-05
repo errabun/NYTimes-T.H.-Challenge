@@ -10,3 +10,31 @@
   display: flex; 
   justify-content: center;
 }
+
+.genre-select {
+  font-size: 18px;
+  width: 12em; 
+  height: 1.5em;
+  box-shadow: 5px 5px 5px lightgray;
+}
+
+.select-btn {
+  width: 8em; 
+  padding: 1em .5em; 
+  margin-top: 2em;
+  border-radius: 12px; 
+  box-shadow: 5px 5px 5px lightgray;
+
+}
+
+@media only screen and (max-width: 768px) {
+  .genre-select {
+    font-size: 14px;
+    height: 1.5em; 
+  }
+
+  .query-btn {
+    width: 6em; 
+    margin-top: 1em; 
+  }
+}
