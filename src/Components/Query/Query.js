@@ -6,9 +6,11 @@ function Query({ articles, findSelected }) {
   const listArticles = articles.map(article => {
     return (
       <div>
-        <button key={article.title} onClick={() => findSelected(article.id)}>
-          {article.title}
-        </button>
+        <Link to='/article'>
+          <button key={article.title} className='query-btn' onClick={() => findSelected(article.id)}>
+            {article.title}
+          </button>
+        </Link>
         <p>{article.byline}</p>
       </div>
     )
@@ -17,11 +19,8 @@ function Query({ articles, findSelected }) {
   return (
     <div className='query-container'>
       <div className='list-container'>
-        <h2>Other related news stories...</h2>
         <main>
-          <Link to='/article'>
-            {listArticles}
-          </Link>
+          {listArticles}
         </main>
       </div>
     </div>

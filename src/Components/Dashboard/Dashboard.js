@@ -23,7 +23,6 @@ function Dashboard ({ submitGenre }) {
         <select id='article-select' value={newsSelection} onChange={e => setNewsSelection(e.target.value)}>
           {selectGenre}
         </select>
-          {/* <button onClick={e => submitGenre(e.target.value)}>Submit</button> */}
         <Link to='/query' onClick={() => handleClick()}>  
           View articles
         </Link>
