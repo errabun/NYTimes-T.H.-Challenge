@@ -19,13 +19,15 @@ function Dashboard ({ submitGenre }) {
   return(
     <div className='component-container'>
       <main className='select-container'>
-        <h2 style={{'textAlign': 'center'}}>What kind of articles would you like to view?</h2>
-        <select id='article-select' value={newsSelection} onChange={e => setNewsSelection(e.target.value)}>
+        <h2 style={{'textAlign': 'center'}}>What kind of news articles would you like to view?</h2>
+        <select className='genre-select' id='article-select' value={newsSelection} onChange={e => setNewsSelection(e.target.value)}>
           {selectGenre}
         </select>
-        <Link to='/query' onClick={() => handleClick()}>  
-          View articles
-        </Link>
+        <button className='query-btn'>
+          <Link to='/query' onClick={() => handleClick()}>  
+            View articles
+          </Link>
+        </button>
       </main>
     </div>
   )
